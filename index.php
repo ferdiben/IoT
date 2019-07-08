@@ -13,6 +13,7 @@ $mqtt = new bluerhinos\phpMQTT($server, $port, $client_id);
 if ($mqtt->connect(true, NULL, $username, $password)) {
 	$mqtt->publish("esp/test", "1");
 	$mqtt->close();
+	echo "Door opened\n";
 } else {
     echo "Time out!\n";
 }
